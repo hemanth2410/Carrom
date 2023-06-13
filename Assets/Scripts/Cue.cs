@@ -69,7 +69,7 @@ public class Cue : MonoBehaviour
 
         else if (!forceApplied)
         {
-            transform.position = striker.transform.position;
+            //transform.position = striker.transform.position;
             //forceApplied = true;
         }
         

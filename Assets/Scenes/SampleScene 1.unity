@@ -17633,7 +17633,7 @@ MonoBehaviour:
   speed: 1
   t: 0
   force: {x: 0, y: 0, z: 0}
-  striker: {fileID: 0}
+  striker: {fileID: 609772838388615990}
   offset: {x: 0, y: 0, z: 0}
 --- !u!23 &3478555240886147256
 MeshRenderer:

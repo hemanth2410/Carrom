@@ -37,7 +37,7 @@ public class StrikerPosition : MonoBehaviour
         float xPos = centralPoint.transform.position.x + (radius * Mathf.Sin(angle));
         float yPos = centralPoint.transform.position.z + (radius * Mathf.Cos(angle));
         transform.position = new Vector3(xPos, transform.position.y, yPos);
-        lr.aimLine.enabled = false;
+        //lr.aimLine.enabled = false;
     }
 
 
