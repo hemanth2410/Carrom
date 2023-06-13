@@ -10,7 +10,9 @@ public class ButtonColourChange : MonoBehaviour
     public Material[] material1;
     public Color[] newColor;
     private int currentIndex = 0;
-    public int counter = 0;
+    public static int counter = 0;
+
+    public GameObject options;
 
 
     public void Start()
@@ -38,10 +40,31 @@ public class ButtonColourChange : MonoBehaviour
         foreach (GameObject obj in objectsToChange)
         {
             Renderer renderer = obj.GetComponent<Renderer>();
+            if(WhiteButtonScript.white == 1)
+            {
+                counter = 2;
+                WhiteButtonScript.white = 0;
+            }
+            if (YellowButtonClick.yellow == 1)
+            {
+                counter = 3;
+                YellowButtonClick.yellow = 0;
+            }
+            if (GreyButtonClick.Grey == 1)
+            {
+                counter = 0;
+                GreyButtonClick.Grey = 0;
+            }
+            if (BlackButtonClick.Black == 1)
+            {
+                counter = 1;
+                BlackButtonClick.Black = 0;
+            }
             renderer.material = material1[counter];
             currentIndex = currentIndex + 1;
             if (currentIndex == 6)
             {
+                options.SetActive(false);
                 currentIndex = 0;
                 counter = counter + 1;
                 if(counter == 4)
