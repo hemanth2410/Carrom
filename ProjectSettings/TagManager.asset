@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - regularcoin
+  - baulk line
+  - player1coin
   layers:
   - Default
   - TransparentFX
