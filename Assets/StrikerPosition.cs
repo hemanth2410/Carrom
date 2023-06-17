@@ -29,16 +29,16 @@ public class StrikerPosition : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            ED.DisableScript();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    ED.DisableScript();
+        //}
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            StartCoroutine("waitfor3sec");
-            ED.EnableScript3();
-        }
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    StartCoroutine("waitfor3sec");
+        //    ED.EnableScript3();
+        //}
         if (setanglebool)
         {
             setangle();
@@ -73,8 +73,8 @@ public class StrikerPosition : MonoBehaviour
         setanglebool= false;
     }*/
 
-    IEnumerator waitfor3sec()
-    {
-        yield return new WaitForSeconds(3f);
-    }
+    //IEnumerator waitfor3sec()
+    //{
+    //    yield return new WaitForSeconds(3f);
+    //}
 }

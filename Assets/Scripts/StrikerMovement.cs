@@ -25,7 +25,7 @@ public class StrikerMovement : MonoBehaviour
 
     private void Start()
     {
-        cue.transform.localPosition = transform.localPosition;
+        //cue.transform.localPosition = transform.localPosition;
         rb = GetComponent<Rigidbody>();
         //cb = GetComponent<Rigidbody>();
         startRotation = transform.rotation;
@@ -35,25 +35,30 @@ public class StrikerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            switch0.DisableScript();
+            cue.gameObject.SetActive(true);
+            switch0.EnableScript3();
+
             startPoint = GetMousePosition();
         }
 
-        if (Input.GetMouseButton(0))
-        {
-            switch0.EnableScript3();
+        //if (Input.GetMouseButton(0))
+        //{
+        //    //switch0.DisableScript();
 
-        }
+        //}
 
         if (Input.GetMouseButtonUp(0))
         {
+            
             endPoint = GetMousePosition();
             DragStriker();
             ShootStriker();
-            switch0.DisableScript();
+            //switch0.EnableScript3();
+            
+            
         }
 
-        cue.transform.localPosition = cue.transform.localPosition + new Vector3(0,0, endPoint.z);
+        //cue.transform.localPosition = cue.transform.localPosition + new Vector3(0,0, endPoint.z);
     }
 
     private Vector3 GetMousePosition()
@@ -61,7 +66,7 @@ public class StrikerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit,100f,BOARD))
         {
             return hit.point;
         }
@@ -80,6 +85,8 @@ public class StrikerMovement : MonoBehaviour
 
         float dragAngle = Mathf.Clamp(distance / maxDragDistance, 0f, 1f) * maxDragAngle;
 
+        switch0.DisableScript();
+
         // Adjust the position of the striker during dragging
         //rb.MovePosition(startPoint + force * Time.deltaTime);
         //rb.MovePosition(startPoint);
@@ -87,23 +94,25 @@ public class StrikerMovement : MonoBehaviour
         //rb.MovePosition(startPoint + force * Time.deltaTime);
         //rb.MoveRotation(startRotation * Quaternion.Euler(Vector3.up * dragAngle));
 
-        
+
     }
 
     private void ShootStriker()
     {
-        rb.AddForce(-force, ForceMode.Impulse);
-        switch0.EnableScript3();
+        Debug.Log("shootstrikerinside");
+        rb.AddForce(-Camera.main.transform.forward * force.z * 10f, ForceMode.Impulse);
+        cue.gameObject.SetActive(false);
+        
     }
 
-    public void DisableScript()
-    {
-        enabled = false;
-    }
+    //public void DisableScript()
+    //{
+    //    enabled = false;
+    //}
 
 
-    public void EnableScript3()
-    {
-        enabled = true;
-    }
+    //public void EnableScript3()
+    //{
+    //    enabled = true;
+    //}
 }

@@ -42,22 +42,22 @@ public class ButtonColourChange : MonoBehaviour
             Renderer renderer = obj.GetComponent<Renderer>();
             if(WhiteButtonScript.white == 1)
             {
-                counter = 2;
+                counter = 0;
                 WhiteButtonScript.white = 0;
             }
             if (YellowButtonClick.yellow == 1)
             {
-                counter = 3;
+                counter = 1;
                 YellowButtonClick.yellow = 0;
             }
             if (GreyButtonClick.Grey == 1)
             {
-                counter = 0;
+                counter = 3;
                 GreyButtonClick.Grey = 0;
             }
             if (BlackButtonClick.Black == 1)
             {
-                counter = 1;
+                counter = 2;
                 BlackButtonClick.Black = 0;
             }
             renderer.material = material1[counter];

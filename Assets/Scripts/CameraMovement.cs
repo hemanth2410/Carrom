@@ -22,8 +22,8 @@ public class CameraMovement : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
         float mx = Mathf.Clamp(mouseX,-0.1f,0.1f);
-        float my = Mathf.Clamp(mouseY,-0.1f,0.1f);
-        Vector3 movement = new Vector3(mx, my, 0f);
+        //float my = Mathf.Clamp(mouseY,-0.1f,0.1f);
+        Vector3 movement = new Vector3(mx, 0f, 0f);
         transform.Translate(movement);
 
 
