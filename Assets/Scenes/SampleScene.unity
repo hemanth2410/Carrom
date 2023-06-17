@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17966954, g: 0.22496495, b: 0.30650648, a: 1}
+  m_IndirectSpecularColor: {r: 0.1819546, g: 0.22416393, b: 0.28723776, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2541,7 +2541,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.63
+  m_Intensity: 7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2598,14 +2598,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_LocalRotation: {x: 0.55356526, y: 0.039662868, z: 0.37660116, w: 0.74173045}
+  m_LocalRotation: {x: 0.28959334, y: 0.8347576, z: -0.035274923, w: 0.46698081}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 52.309, y: 51.095, z: 80.256}
+  m_LocalEulerAnglesHint: {x: 19.23, y: 126.48, z: 28.5}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7002,7 +7002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72a0e1cacc6f6c47850fcc3ec7cb3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameCon: {fileID: 0}
 --- !u!65 &1094530303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7264,12 +7263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 10
   maxDragDistance: 2
-  rb: {fileID: 0}
   BOARD:
     serializedVersion: 2
     m_Bits: 0
-  maxDragAngle: 45
-  cue: {fileID: 0}
 --- !u!54 &1109668658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7318,7 +7314,6 @@ MonoBehaviour:
   angle: 0
   startpos: 0.3
   setanglebool: 1
-  lr: {fileID: 0}
 --- !u!1 &1110503402
 GameObject:
   m_ObjectHideFlags: 0
@@ -11273,7 +11268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.38}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 15.01001, y: 525.81}
+  m_AnchoredPosition: {x: 15.009979, y: 525.81}
   m_SizeDelta: {x: 108.1, y: 17.599998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719598253
@@ -13257,7 +13252,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df82f69c8684bce449eb27e0b16bf23d, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13295,8 +13290,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992674729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -13.2, z: 0}
-  m_LocalScale: {x: 2670.5227, y: 26.705225, z: 2670.5227}
+  m_LocalPosition: {x: 0, y: -0.76, z: 0}
+  m_LocalScale: {x: 47.565, y: 0.47564995, z: 47.565}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -14260,12 +14255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 20
   maxDragDistance: 2
-  rb: {fileID: 0}
   BOARD:
     serializedVersion: 2
     m_Bits: 64
-  maxDragAngle: 45
-  cue: {fileID: 0}
 --- !u!1 &2146821043
 GameObject:
   m_ObjectHideFlags: 0
@@ -15808,7 +15800,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609772838388615990}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f71f44d71532234ca586fa804132b1a, type: 3}
   m_Name: 
@@ -15824,16 +15816,10 @@ MonoBehaviour:
   pos: {fileID: 0}
   mouseX: 0
   shootingForce: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
   switch2: {fileID: 0}
   minValue: 0
   maxValue: 30
   lerpSpeed: 1
-  gameCon: {fileID: 0}
-  currentIndex: 0
-  forceApplied: 0
 --- !u!114 &6338972335552650623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15841,7 +15827,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609772838388615990}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5d4d71221142db46950c46045b32ae2, type: 3}
   m_Name: 
@@ -15852,7 +15838,6 @@ MonoBehaviour:
   angle: 0
   startpos: 0.3
   setanglebool: 1
-  lr: {fileID: 0}
 --- !u!4 &6406489918415382858
 Transform:
   m_ObjectHideFlags: 0
