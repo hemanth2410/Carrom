@@ -9,6 +9,7 @@ public class Enablecoincolorchange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        options1.SetActive(false);
         gameObject.GetComponent<Button>().onClick.AddListener(enableoptions);
     }
 

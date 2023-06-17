@@ -26,6 +26,7 @@ public class Cue : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        striker = GameObject.FindGameObjectWithTag("Striker");
     }
 
     // Update is called once per frame
@@ -69,7 +70,7 @@ public class Cue : MonoBehaviour
 
         else if (!forceApplied)
         {
-            //transform.position = striker.transform.position;
+            transform.position = striker.transform.position;
             //forceApplied = true;
         }
         

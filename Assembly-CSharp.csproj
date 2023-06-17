@@ -56,20 +56,32 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\not this\CarromStriker.cs" />
+    <Compile Include="Assets\Scripts\not this\CueController.cs" />
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\Scripts\CarromCue.cs" />
     <Compile Include="Assets\Enablecoincolorchange.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\not this\Goal.cs" />
+    <Compile Include="Assets\Scripts\not this\Coin.cs" />
+    <Compile Include="Assets\Scripts\not this\CueStriker.cs" />
+    <Compile Include="Assets\Scripts\not this\CueCode.cs" />
     <Compile Include="Assets\BlackButtonClick.cs" />
     <Compile Include="Assets\StrikerPosition.cs" />
+    <Compile Include="Assets\Scripts\StrikerMovement.cs" />
     <Compile Include="Assets\YellowButtonClick.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\GreyButtonClick.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\not this\rotateboard.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\not this\InsideBaulkline.cs" />
     <Compile Include="Assets\WhiteButtonScript.cs" />
+    <Compile Include="Assets\Scripts\not this\Striker.cs" />
     <Compile Include="Assets\Scripts\Cue.cs" />
     <Compile Include="Assets\LinerendererCollision.cs" />
     <Compile Include="Assets\ButtonColourChange.cs" />
+    <Compile Include="Assets\Scripts\EnableDisableScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
