@@ -82,6 +82,7 @@
     <Compile Include="Assets\LinerendererCollision.cs" />
     <Compile Include="Assets\ButtonColourChange.cs" />
     <Compile Include="Assets\Scripts\StrikerMovement.cs" />
+    <Compile Include="Assets\Scripts\LockMouseXY.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
