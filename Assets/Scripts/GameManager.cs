@@ -1,37 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
-    bool cueLocked;
-    public bool CueLocked { get { return cueLocked; } }
-    public event Action<Vector3, float> ApplyForce;
-    public event Action EnableCue;
-    public static GameManager Instance
+    // Start is called before the first frame update
+    void Start()
     {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindAnyObjectByType<GameManager>();
-            }
-            return instance;
-        }
+        Debug.Log("hi, I am Dhritiraj");
     }
-    public void ToggleCueLockState()
+
+    // Update is called once per frame
+    void Update()
     {
-        cueLocked = !cueLocked;
-    }
-    public void InvokeForceApplied(Vector3 forceDirection, float force)
-    {
-        ApplyForce?.Invoke(forceDirection, force);
-    }
-    public void InvokeEnableCue()
-    {
-        EnableCue?.Invoke();
+        
     }
 }

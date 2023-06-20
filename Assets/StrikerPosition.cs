@@ -15,8 +15,7 @@ public class StrikerPosition : MonoBehaviour
     public bool setanglebool = true;
     public GameObject striker;
     public StrikerMovement ED;
-    bool strikerMoving;
-    Rigidbody rb;
+
     void Start()
     {
         if(striker == null)
@@ -24,29 +23,28 @@ public class StrikerPosition : MonoBehaviour
             Debug.Log("dcgxsg");
         }
         striker = GameObject.FindGameObjectWithTag("Striker");
-        GameManager.Instance.ApplyForce += Instance_ApplyForce;
-        rb = GetComponent<Rigidbody>();
     }
 
-    private void Instance_ApplyForce(Vector3 forceDirection, float forceMagnitude)
+    // Update is called once per frame
+    void Update()
     {
-        strikerMoving = true;
-        rb.isKinematic = false;
-        rb.AddForce(forceDirection *  forceMagnitude , ForceMode.Impulse);
-        
-    }
-    private void FixedUpdate()
-    {
-        if (rb.velocity.magnitude <= 0.5f && strikerMoving)
-        {
-            rb.velocity = Vector3.zero;
-            strikerMoving = false;
-            GameManager.Instance.InvokeEnableCue();
-        }
-        if (setanglebool && !strikerMoving)
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    ED.DisableScript();
+        //}
+
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    StartCoroutine("waitfor3sec");
+        //    ED.EnableScript3();
+        //}
+        if (setanglebool)
         {
             setangle();
         }
+
+        //freezepos.onClick.AddListener(OnClickButton);
     }
 
     void setangle()
