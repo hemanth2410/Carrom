@@ -7,7 +7,7 @@ public class CueDrag : MonoBehaviour
 {
     //public StrikerMovement endpoint;
     public Slider dragSlider;
-    public GameObject cue;
+    //public GameObject cue;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +23,11 @@ public class CueDrag : MonoBehaviour
         Debug.Log("end" + StrikerMovement.endPoint);
         dragSlider.value = force.magnitude * 3f;
         //cue.transform.localPosition += new Vector3(0,0,Camera.main.transform.localPosition.z) * -force.magnitude;
-        if (Input.GetMouseButton(0))
-        {
-            cue.transform.localPosition += new Vector3(cue.transform.localPosition.x, cue.transform.localPosition.y,
-            -force.magnitude);
-        }
+        //if (Input.GetMouseButton(0))
+        //{
+           // cue.transform.localPosition += new Vector3(cue.transform.localPosition.x, cue.transform.localPosition.y,
+           // -force.magnitude);
+        //}
         //Debug.Log(force.magnitude);
         //cue.transform.localPosition = cue.transform.localPosition + new Vector3(0,0, StrikerMovement.rendpoint.magnitude);
         //if (Input.GetMouseButton(0))
