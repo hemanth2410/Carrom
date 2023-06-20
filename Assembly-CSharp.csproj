@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Cue.cs" />
     <Compile Include="Assets\LinerendererCollision.cs" />
     <Compile Include="Assets\ButtonColourChange.cs" />
+    <Compile Include="Assets\Scripts\CueDrag.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

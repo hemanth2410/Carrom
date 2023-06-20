@@ -19,7 +19,7 @@ public class rotateboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        angle = rotateslider.value * 360f;
+        angle = rotateslider.value * 540f;
         this.transform.rotation = Quaternion.Euler(0, angle, 0);
     }
 }

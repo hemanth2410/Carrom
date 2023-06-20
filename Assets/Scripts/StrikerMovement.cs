@@ -10,8 +10,9 @@ public class StrikerMovement : MonoBehaviour
 
     public Rigidbody rb;
     //public Rigidbody cb;
-    private Vector3 startPoint;
-    private Vector3 endPoint;
+    public static Vector3 startPoint;
+    public static Vector3 endPoint;
+    public static Vector3 rendpoint;
     private Vector3 force;
     public LayerMask BOARD;
 
@@ -29,10 +30,13 @@ public class StrikerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         //cb = GetComponent<Rigidbody>();
         startRotation = transform.rotation;
+        //rsor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
+        rendpoint = GetMousePosition();
+
         if (Input.GetMouseButtonDown(0))
         {
             cue.gameObject.SetActive(true);
@@ -66,7 +70,7 @@ public class StrikerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit,100f,BOARD))
+        if (Physics.Raycast(ray, out hit,1000f,BOARD))
         {
             return hit.point;
         }
@@ -100,7 +104,7 @@ public class StrikerMovement : MonoBehaviour
     private void ShootStriker()
     {
         Debug.Log("shootstrikerinside");
-        rb.AddForce(-Camera.main.transform.forward * force.z * 10f, ForceMode.Impulse);
+        rb.AddForce((Camera.main.transform.forward * Mathf.Abs(force.z) * 10f), ForceMode.Impulse);
         cue.gameObject.SetActive(false);
         
     }
